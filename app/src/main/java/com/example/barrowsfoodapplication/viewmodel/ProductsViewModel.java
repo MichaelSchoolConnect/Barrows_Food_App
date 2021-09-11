@@ -46,11 +46,11 @@ public class ProductsViewModel extends AndroidViewModel {
         //Schedule one-time request meaning it runs only once but it can be upgraded/changed.
         WorkRequest webservice =
                 new OneTimeWorkRequest.Builder(WebService.class)
-                        // Retry
+                        /*// Retry
                         .setBackoffCriteria(
                                 BackoffPolicy.LINEAR,
                                 OneTimeWorkRequest.MIN_BACKOFF_MILLIS,
-                                TimeUnit.MILLISECONDS)
+                                TimeUnit.MILLISECONDS)*/
                         // Only execute if there's a network connection.
                         .setConstraints(constraints)
                         .addTag(TAG_OUTPUT)

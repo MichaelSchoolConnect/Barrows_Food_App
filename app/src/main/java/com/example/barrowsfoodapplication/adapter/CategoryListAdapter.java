@@ -22,7 +22,7 @@ public class CategoryListAdapter extends ListAdapter<ProductModel, CategoryViewH
     @Override
     public void onBindViewHolder(CategoryViewHolder holder, int position) {
         ProductModel current = getItem(position);
-        holder.bind(current.getName());
+        holder.bind(current.name);
     }
 
     public static class ProductDiff extends DiffUtil.ItemCallback<ProductModel>{
@@ -33,7 +33,7 @@ public class CategoryListAdapter extends ListAdapter<ProductModel, CategoryViewH
 
         @Override
         public boolean areContentsTheSame(@NonNull ProductModel oldItem, @NonNull ProductModel newItem) {
-            return oldItem.getName().equals(newItem.getName());
+            return oldItem.name.equals(newItem.name);
         }
 
     }
